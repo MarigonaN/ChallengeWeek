@@ -1,0 +1,121 @@
+body { 
+    background-color: rgba(17, 17, 88, 0.664);
+    background: linear-gradient(to right, rgb(31, 81, 146), rgb(1, 10, 19));
+    width: 100%;
+    height: 100vh;
+
+}
+
+nav {
+    background-color: black;
+    justify-content: flex-start;
+    position: relative;
+    margin-left: -10%;
+    margin-bottom:0;
+}
+
+ul {
+    list-style-type: none;
+    height: 100vh;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+ul li a{
+    color:white;
+    
+}
+
+#nav ul li a:hover{
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+    border-bottom:2px solid  rgba(89, 211, 8, 0.774) !important; 
+  
+}
+#nav ul li a.active{
+    border-bottom:2px solid  rgba(89, 211, 8, 0.774) !important; 
+
+}
+#nav1 ul li a:hover{
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+    border-left:2px solid  rgba(89, 211, 8, 0.774) !important; 
+  
+}
+#nav1 ul li a.active{
+    border-left: 2px solid  rgba(89, 211, 8, 0.774) !important;
+}
+ul li a:hover{
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+}
+
+.a2:hover {
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+    border-left:3px solid rgb(8, 211, 8) !important; 
+    border-bottom:none !important;
+}
+
+.nav-2 {
+    background-color: transparent;
+    color:white ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+   
+}
+.btnBorder {
+    border-radius:40px;
+    width:100%;
+}
+
+.nav-2 ul {
+    height: 50px;
+    width: 700%;
+}
+h1 {
+    color:white;
+}
+
+p {
+    color:white;
+    justify-self: center;
+}
+
+
+#sticky-footer {
+    width: 100vh;
+   
+  }
+
+  .progress-bar{
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.progress-bar2{
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.justify-content-center{
+    font-size: 13px;
+}
