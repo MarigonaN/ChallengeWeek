@@ -60,13 +60,7 @@ ul li a:hover{
     text-decoration: none;
 }
 
-.a2:hover {
-    font-weight: bold !important;
-    color:white;
-    text-decoration: none;
-    border-left:3px solid rgb(8, 211, 8) !important; 
-    border-bottom:none !important;
-}
+
 
 .nav-2 {
     background-color: transparent;
