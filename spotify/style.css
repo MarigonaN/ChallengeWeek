@@ -96,30 +96,9 @@ p {
 }
 
 
-#sticky-footer {
-    width: 100vh;
-   
-  }
 
-  .progress-bar{
-    width: 100%;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    height: 4px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
 
-.progress-bar2{
-    width: 30%;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    height: 4px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
+
 
 .justify-content-center{
     font-size: 13px;
