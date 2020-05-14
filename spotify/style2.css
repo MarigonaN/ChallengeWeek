@@ -108,11 +108,13 @@ input[type="checkbox"] {
 }
 .checkbox label {
     position: relative;
+    padding-left: 25px;
 }
 .checkbox label:before {
     content: '';
     position: absolute;
     left: 0;
+    right: 5px;
     top: 0;
     margin: 4px;
     width: 22px;
@@ -150,7 +152,7 @@ input[type="checkbox"] {
 .checkbox label {
     min-height: 34px;
     display: block;
-    padding-left: 0px;
+   
     margin-bottom: 0;
     font-weight: normal;
     cursor: pointer;
