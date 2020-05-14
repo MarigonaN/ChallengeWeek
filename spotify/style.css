@@ -102,3 +102,48 @@ margin-top: 10px;
 margin-right: 10px;
 margin-left: 10px;
 }
+
+@media screen and (max-width: 552px) {
+    .fixed-top{
+        display: inline-block;
+    }
+    .toggle {
+        display: block;
+    }
+ }
+
+@media screen and (max-width: 552px) { 
+    nav {
+        display: none;
+       
+    }
+
+    .toggle {
+        display: block;
+    }
+
+     .right-col {
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (min-width: 553px) { 
+    .fixed-top {
+        display: none;
+       
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    
+}
+@media screen and (max-width: 768px) {
+    .right-col {
+        margin-left: 18%;
+    }
+ }
+
+
