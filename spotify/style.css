@@ -128,7 +128,32 @@ margin-left: 10px;
 }
 
 
-@media screen and (min-width: 553px) { 
+@media screen and (max-width: 673px) {
+    .fixed-top{
+        display: inline-block;
+    }
+    .toggle {
+        display: block;
+    }
+ }
+
+@media screen and (max-width: 674px) { 
+    nav {
+        display: none;
+       
+    }
+
+    .toggle {
+        display: block;
+    }
+
+     .right-col {
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (min-width: 673px) { 
     .fixed-top {
         display: none;
        
@@ -140,10 +165,5 @@ margin-left: 10px;
 
     
 }
-@media screen and (max-width: 768px) {
-    .right-col {
-        margin-left: 18%;
-    }
- }
 
 
