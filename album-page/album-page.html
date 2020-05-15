@@ -250,23 +250,32 @@ width: 100%;
   opacity: 1;
 }
 
-.icon {
-  color: red;
-  font-size: 200px;
-  position: absolute;
-  top: 21%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.overlay .fa-play-circle:hover {
-  color:red;
-  
 .sidebar a:hover{
   color: white !important;
  
+}
+.sidebar .active{
+  color: white !important;
+  font-weight: bolder;
+  font-size: 16px !important;
+  
+}
+.sidebar a:hover::after {
+  
+  height: 3px;
+  border-radius: 30px;
+  width: 40%;
+  background-color: rgb(4, 179, 4);
+
+  bottom: 0;
+  
+}
+.sidebar a:hover {
+  font-weight: bold !important;
+  color: white;
+  text-decoration: none;
+  border-left: 3px solid rgb(8, 211, 8) !important;
+  border-bottom: none !important;
 }
 .sidebar .active{
   color: white !important;
