@@ -62,17 +62,7 @@
     border: 1px solid #d9dadc;
     border-radius: 0;
 }
-/* input[type=checkbox],
-input[type=radio]{
-    width: 70px;
-    height: 20px;
-    color: chartreuse !important;
-}
 
-input[type="checkbox"] {
-    background: #3d404e;
-    border: #7f83a2 1px solid;
- } */
 .forgot-password{
     color: green;
     justify-content: center;
