@@ -175,10 +175,12 @@ p {
 #lgFooter {
   position: sticky;
   width: 100%;
+  background-color: rgba(85, 84, 84, 0.623);
 }
 #smFooter {
   position: sticky;
   width: 100%;
+  background-color: rgba(85, 84, 84, 0.623);
 }
 
 .progress-bar {
