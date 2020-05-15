@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+aside {
+  height: 100vh;
+  background-color: black;
+}
+
+section {
+  background-color: rgb(24, 23, 23);
+}
+
+.song-list:hover {
+  background-color: rgb(61, 60, 60);
+  transition: 1s;
+}
+
+article {
+  background-color: rgb(17, 17, 17);
+}
+
+footer {
+  background-color: rgb(37, 36, 36);
+}
+
+.font-size {
+  font-size: 1.2vw;
+}
+
+.head-font {
+  font-size: 1.5vw;
+}
+
+.sub-font {
+  font-size: 1.3vw;
+}
+
+.svg-size {
+  width: 2vw;
+  height: 2vw;
+}
+
+#play-time {
+  width: 300px;
+  height: 2px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#play-time:hover {
+  border: 2px solid green;
+}
+
+#volume {
+  width: 80px;
+  height: 2px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.install-app {
+  margin-bottom: 100px;
+}
+
+.premium,
+.pause {
+  display: none;
+}
+
+@media only screen and (max-width: 552px) {
+  aside {
+    height: 9vh;
+  }
+  .font-size {
+    font-size: 2vw;
+  }
+  .head-font {
+    font-size: 3.5vw;
+  }
+
+  .sub-font {
+    font-size: 3vw;
+  }
+  .svg-size {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  aside nav.container ul li:first-child {
+    display: none;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 9%;
+    left: 0;
+    right: 0;
+  }
+
+  .footer-hide {
+    display: none;
+  }
+  .premium,
+  .pause {
+    display: block;
+  }
+}
