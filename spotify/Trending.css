@@ -95,12 +95,6 @@ img:hover {
   bottom: 0;
   top: 0.5;
 }
-
-.FirstAlbum {
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 .a2:hover {
   font-weight: bold !important;
   color: white;
@@ -108,6 +102,12 @@ img:hover {
   border-left: 3px solid rgb(8, 211, 8) !important;
   border-bottom: none !important;
 }
+.FirstAlbum {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
 
 .nav-2 {
   background-color: transparent;
@@ -173,14 +173,13 @@ p {
   width: 100vh;
 }
 #lgFooter {
+  background-color: rgba(85, 84, 84, 0.623);
   position: sticky;
   width: 100%;
-  background-color: rgba(85, 84, 84, 0.623);
 }
 #smFooter {
   position: sticky;
   width: 100%;
-  background-color: rgba(85, 84, 84, 0.623);
 }
 
 .progress-bar {
