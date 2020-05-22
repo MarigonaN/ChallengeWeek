@@ -1,6 +1,7 @@
 window.onload = function () {
   maxWidth768();
   maxWidth552();
+  load();
 };
 
 const maxWidth768 = () => {
@@ -58,4 +59,63 @@ const maxWidth552 = () => {
     }
     mediaImg.classList.replace("col-2", "col-3");
   }
+};
+
+const load = () => {
+  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+    method: "GET",
+    headers: {
+      "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+      "x-rapidapi-key": "197e79dc65msh5a23ea9aa4d18b4p14b80cjsn6bb58c4783fd",
+    },
+  })
+    .then((response) => response.json())
+    .then((myData) => myData.data)
+    .then((myData) => {
+      const tBody = document.querySelector("tbody");
+      const title = document.querySelector("#main-title");
+      const footerTitle = document.querySelector("#footer-song-title");
+      const footerImg = document.querySelector("#footer-img");
+      for (data of myData) {
+        tBody.innerHTML += `<tr class="d-flex justify-content-center py-2 song-list">
+          <td class="align-self-center">
+            <i class="fas fa-play-circle"></i>
+          </td>
+          <td class="col-8">
+            <div class="head-font">${data.title_short}</div>
+            <span class="sub-font">${data.artist.name}</span>
+          </td>
+          <td class="col-1">
+            <i class="fas fa-ellipsis-h"></i>
+          </td>
+          <td class="col-2 footer-hide">${data.duration}</td>
+        </tr>`;
+      }
+      title.innerHTML += `<div class="col-3">
+      <img
+        src=" ${myData[0].artist.picture_big}"
+        alt=""
+        class="img-fluid"
+      />
+    </div>
+    <div class="col d-flex flex-column justify-content-end text-light">
+      <p> Album</p>
+      <h1>${myData[0].album.title}</h1>
+      <p>
+        <i class="far fa-user-circle"></i> ${myData[0].artist.name} &#183; 2020 &#183; 59 min 47
+        sec
+      </p>
+    </div>`;
+      footerTitle.innerHTML += `<div>${myData[0].title_short}</div>
+    <div>${myData[0].artist.name}</div>`;
+      footerImg.innerHTML += `<img
+      loading="eager"
+      src="${myData[0].artist.picture_small}"
+      alt=""
+      class="_31deeacc1d30b0519bfefa0e970ef31d-scss cover-art-image"
+    />`;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
