@@ -389,7 +389,7 @@ margin-left: 30%;
             
                 <div class="row  row-cols-sm-2 row-cols-md-3 row-cols-lg-6 pb-5"id="hello" >
                     
-            <div class="card " > 
+            <!-- <div class="card " > 
                 
                 <img src="images/SharedImage-83983.jpg" class="card-img-top image " alt="...">
                 <div class="overlay">
@@ -473,8 +473,8 @@ margin-left: 30%;
                   <p class="card-text">Artist name</p>
                   
                 </div>
-              </div> <!--end of card no:7-->
-              <div class="card" > <!--card no:8-->
+              <!-- </div> end of card no:7
+              <div class="card" > card no:8
                 <img src="images/nightoftheodeon.jpg" class="card-img-top" alt="...">
                 <div class="overlay">
                     <div class="icon">
@@ -485,8 +485,8 @@ margin-left: 30%;
                   <p class="card-text">Artist name</p>
                   
                 </div>
-              </div> <!--end of card no:8-->
-              <div class="card" > <!--card no:9-->
+              </div> 
+              <div class="card" > 
                 <img src="images/liveatwembley.jpg" class="card-img-top" alt="...">
                 <div class="overlay">
                     <div class="icon">
@@ -497,8 +497,8 @@ margin-left: 30%;
                   <p class="card-text">Artist name</p>
                   
                 </div>
-              </div> <!--end of card no:9-->
-              <div class="card" > <!--card no:10-->
+              </div>
+              <div class="card" > 
                 <img src="images/made in heaven.jpg" class="card-img-top" alt="...">
                 <div class="overlay">
                     <div class="icon">
@@ -509,8 +509,8 @@ margin-left: 30%;
                   <p class="card-text">Artist name</p>
                   
                 </div>
-              </div> <!--end of card no:10-->
-              <div class="card" > <!--card no:10-->
+              </div> 
+              <div class="card" > 
                 <img src="images/nightoftheodeon.jpg" class="card-img-top" alt="...">
                 <div class="overlay">
                     <div class="icon">
@@ -521,8 +521,8 @@ margin-left: 30%;
                   <p class="card-text">Artist name</p>
                   
                 </div>
-              </div> <!--end of card no:10-->
-              <div class="card" > <!--card no:10-->
+              </div> 
+              <div class="card" > 
                 <img src="images/queen rock.jpg" class="card-img-top" alt="...">
                 <div class="overlay">
                     <div class="icon">
@@ -533,7 +533,7 @@ margin-left: 30%;
                   <p class="card-text">Artist name</p>
                   
                 </div>
-              </div> <!--end of card no:10-->
+              </div> end of card no:10  -->
             
             </div><!--end of row class for songs-->
             </div>
@@ -573,7 +573,7 @@ margin-left: 30%;
  </div>
 <script>
 window.onload = function(){
-  document.querySelectorAll("#hello").innerHTML=""
+  
   let artist = ["metallica", "3 doors down" , "madona" , "justin bieber" , ]
         artist.forEach(artisti =>{
           fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${artisti}`, {
@@ -592,11 +592,11 @@ window.onload = function(){
                  
                   cards.innerHTML += `
                   <div class="card" > 
-               <a href="/artistpage/artistpage.html"> <img src="${albums[i].album.cover_medium}" class="card-img-top" alt="..."></a>
+             <a href="/artist-page/artist-page.html?albumId=${albums[i].album.id}"> <img src="${albums[i].album.cover_medium}" class="card-img-top" alt="...">
                 <div class="overlay">
                     <div class="icon">
                          <i class="fa fa-play-circle ml-1 pr-2  "></i></div>
-                    </div>
+                    </div></a>
                 <div class="card-body">
                   <h5 class="card-title">${albums[i].album.title}</h5>
                   <h5 class="card-title">${albums[i].album.id}</h5>
@@ -651,7 +651,8 @@ function showAlbums(){
               dataColected.forEach(search =>{
                 let cardDiv = document.createElement("div")
                 cardDiv.classList="card"
-                let img = document.createElement("img")
+                cardDiv.classList.add = "overlay"
+               let img = document.createElement("img")
                 img.classList="card-img-top"
                 
                 let divCardBody = document.createElement("div")
@@ -664,11 +665,13 @@ function showAlbums(){
                 let pAlbum = document.createElement("p")
                 pAlbum.innerText="Album: "+search.album.title
                 img.src=search.album.cover
+
+                let hell = document.createElement("a")
                 divCardBody.appendChild(h6Title)
                 divCardBody.appendChild(pArtist)
                 divCardBody.appendChild(pAlbum)
-                
-              
+                hell.href = "/artist-page/artist-page.html?albumId=${search.album.id}";
+              cardDiv.appendChild(hell)
                 cardDiv.appendChild(img)
                 cardDiv.appendChild(divCardBody)
                 photos.appendChild(cardDiv)
