@@ -649,29 +649,7 @@ function showAlbums(){
             .then(moreData =>{
               let photos = document.getElementById("hello")
               moreData.forEach(click =>{
-                // let cardDiv = document.createElement("div")
-                // cardDiv.classList="card"
-                // let img = document.createElement("img")
-                // img.classList="card-img-top"
-                
-                // let divCardBody = document.createElement("div")
-                // divCardBody.classList="card-body d-flex justify-content-between flex-column"
-                // let h6Title = document.createElement("h6")
-                // h6Title.classList="card-title"
-                // h6Title.innerText=search.title_short
-                // let pArtist = document.createElement("p")
-                // pArtist.innerText="Artist: "+search.artist.name
-                // let pAlbum = document.createElement("p")
-                // pAlbum.innerText="Album: "+search.album.title
-                // img.src=search.album.cover
-                // divCardBody.appendChild(h6Title)
-                // divCardBody.appendChild(pArtist)
-                // divCardBody.appendChild(pAlbum)
-                
               
-                // cardDiv.appendChild(img)
-                // cardDiv.appendChild(divCardBody)
-                // photos.appendChild(cardDiv)
                 photos.innerHTML += `
                   <div class="card" > 
              <a href="/artist-page/artist-page.html?albumId=${click.album.id}"> <img src="${click.album.cover_medium}" class="card-img-top" alt="...">
